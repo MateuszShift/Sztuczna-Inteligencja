@@ -6,14 +6,24 @@ Repozytorium zawiera implementacje różnych tematów z dziedziny sztucznej inte
 Tematy
 
 Regresja liniowa - Liczenie gradientu
-Folder: regresja-liniowa
+Folder: lab1
+
 Implementacja regresji liniowej na danych samochodowych. W tym module znajduje się kod do obliczania gradientu.
+
+
 Algorytm genetyczny - Problem plecakowy
-Folder: algorytm-genetyczny
+Folder: lab2
+
 Implementacja algorytmu genetycznego z selekcją, krzyżowaniem i mutacją osobników w populacji. Rozwiązuje problem plecakowy.
+
+
 Minimax i Alfabeta Pruning - Gra Connect4
-Folder: minimax-alfabeta-pruning
+Folder: laby3
+
+
 Implementacja algorytmów Minimax oraz Alfabeta Pruning w grze Connect4. Zastosowano niestandardowy sposób ewaluacji mapy i ustawiania klocka.
+
+
 Kolejne Tematy
 
 W miarę dodawania kolejnych tematów, zostaną one odpowiednio opisane i dodane do repozytorium.
