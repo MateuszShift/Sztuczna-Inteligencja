@@ -27,5 +27,3 @@ Implementacja algorytmów Minimax oraz Alfabeta Pruning w grze Connect4. Zastoso
 Kolejne Tematy
 
 W miarę dodawania kolejnych tematów, zostaną one odpowiednio opisane i dodane do repozytorium.
-
-Możesz kontynuować rozwój tego README.md, dodając kolejne tematy w miarę dodawania nowych folderów do repozytorium. To pozwoli użytkownikom łatwo śledzić postęp i zawartość Twojego projektu.
