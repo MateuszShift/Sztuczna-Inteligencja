@@ -27,6 +27,7 @@ class RandomForest:
         forest_predictions = list(map(lambda x: sum(x)/len(x), zip(*tree_predictions)))
         return forest_predictions
 
+<<<<<<< HEAD
     def bagging(self, X, y): 
         X_selected, y_selected = [], []
         
@@ -38,4 +39,10 @@ class RandomForest:
         X_selected = X_selected.reshape(-1, X.shape[1]) 
         y_selected = y_selected.reshape(-1, 1)
             
+=======
+    def bagging(self, X, y):
+        X_selected, y_selected = None, None
+        # TODO implement bagging
+
+>>>>>>> 6c2a2b0 (Dodanie kolejnej części)
         return X_selected, y_selected

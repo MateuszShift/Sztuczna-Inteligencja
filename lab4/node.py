@@ -1,4 +1,5 @@
 import copy
+<<<<<<< HEAD
 import random
 import numpy as np
 
@@ -75,6 +76,53 @@ class Node: # klasa reprezentująca węzeł drzewa decyzyjnego
             if value > best_gain: 
                 best_gain = value 
                 best_split = (d, [idx, idx + 1]) 
+=======
+
+import numpy as np
+
+
+class Node:
+    def __init__(self):
+        self.left_child = None
+        self.right_child = None
+        self.feature_idx = None
+        self.feature_value = None
+        self.node_prediction = None
+
+    def gini_best_score(self, y, possible_splits):
+        best_gain = -np.inf
+        best_idx = 0
+
+        # TODO find position of best data split
+
+        return best_idx, best_gain
+
+    def split_data(self, X, y, idx, val):
+        left_mask = X[:, idx] < val
+        return (X[left_mask], y[left_mask]), (X[~left_mask], y[~left_mask])
+
+    def find_possible_splits(self, data):
+        possible_split_points = []
+        for idx in range(data.shape[0] - 1):
+            if data[idx] != data[idx + 1]:
+                possible_split_points.append(idx)
+        return possible_split_points
+
+    def find_best_split(self, X, y, feature_subset):
+        best_gain = -np.inf
+        best_split = None
+
+        # TODO implement feature selection
+
+        for d in range(X.shape[1]):
+            order = np.argsort(X[:, d])
+            y_sorted = y[order]
+            possible_splits = self.find_possible_splits(X[order, d])
+            idx, value = self.gini_best_score(y_sorted, possible_splits)
+            if value > best_gain:
+                best_gain = value
+                best_split = (d, [idx, idx + 1])
+>>>>>>> 6c2a2b0 (Dodanie kolejnej części)
 
         if best_split is None:
             return None, None

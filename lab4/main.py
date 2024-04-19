@@ -4,7 +4,11 @@ from random_forest import RandomForest
 from load_data import generate_data, load_titanic
 
 def main():
+<<<<<<< HEAD
     np.random.seed(123) 
+=======
+    np.random.seed(123)
+>>>>>>> 6c2a2b0 (Dodanie kolejnej części)
 
     train_data, test_data = load_titanic()
 
@@ -13,9 +17,14 @@ def main():
     dt.evaluate(*train_data)
     dt.evaluate(*test_data)
 
+<<<<<<< HEAD
     rf = RandomForest({"ntrees": 100, "feature_subset": 2, "depth": 14})
     rf.train(*train_data) 
     
+=======
+    rf = RandomForest({"ntrees": 10, "feature_subset": 2, "depth": 14})
+    rf.train(*train_data)
+>>>>>>> 6c2a2b0 (Dodanie kolejnej części)
     rf.evaluate(*train_data)
     rf.evaluate(*test_data)
 

@@ -12,10 +12,16 @@ class DecisionTree:
         self.root_node.train(X, y, self.params)
 
     def evaluate(self, X, y):
+<<<<<<< HEAD
         predicted = self.predict(X) #
         predicted = [round(p) for p in predicted] # zaokrąglanie wyników do 0 lub 1
         print(f"Accuracy: {round(np.mean(predicted==y),2)}") # wyświetlanie dokładności modelu 
         
+=======
+        predicted = self.predict(X)
+        predicted = [round(p) for p in predicted]
+        print(f"Accuracy: {round(np.mean(predicted==y),2)}")
+>>>>>>> 6c2a2b0 (Dodanie kolejnej części)
 
     def predict(self, X):
         prediction = []
