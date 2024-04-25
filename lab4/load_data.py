@@ -16,6 +16,9 @@ def generate_data():
 
 def load_titanic():
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> efadf93 (bagging and feature selection changes)
     data = pd.read_csv("/Users/macmat/Desktop/Sztuczna/lab4/titanic.csv")
     data = data[["Pclass", "Fare", "Parch", "SibSp", "Age", "Sex", "Survived"]] # wybieranie kolumn z danych 
     data = data.dropna().reset_index(drop=True) # usuwanie wierszy z brakującymi danymi
@@ -28,6 +31,7 @@ def load_titanic():
     X_test = data_test.drop("Survived", axis=1).to_numpy() # wybieranie danych testowych bez kolumny Survived i zamiana na numpy array
     y_test = data_test["Survived"].to_numpy() # wybieranie kolumny Survived i zamiana na numpy array
     return (X_train, y_train), (X_test, y_test) # zwracanie danych treningowych i testowych
+<<<<<<< HEAD
 
 =======
     data = pd.read_csv("titanic.csv")
@@ -43,3 +47,5 @@ def load_titanic():
     y_test = data_test["Survived"].to_numpy()
     return (X_train, y_train), (X_test, y_test)
 >>>>>>> 6c2a2b0 (Dodanie kolejnej części)
+=======
+>>>>>>> efadf93 (bagging and feature selection changes)

@@ -28,10 +28,16 @@ class RandomForest:
         return forest_predictions
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     def bagging(self, X, y): 
         X_selected, y_selected = [], []
         
         
+=======
+    def bagging(self, X, y): 
+        X_selected, y_selected = [], []
+        
+>>>>>>> efadf93 (bagging and feature selection changes)
         for i in range(X.shape[1]):  
             idx = np.random.randint(0, len(X), len(X)) 
             X_selected  = np.append(X_selected, X[idx]) 
@@ -39,10 +45,13 @@ class RandomForest:
         X_selected = X_selected.reshape(-1, X.shape[1]) 
         y_selected = y_selected.reshape(-1, 1)
             
+<<<<<<< HEAD
 =======
     def bagging(self, X, y):
         X_selected, y_selected = None, None
         # TODO implement bagging
 
 >>>>>>> 6c2a2b0 (Dodanie kolejnej części)
+=======
+>>>>>>> efadf93 (bagging and feature selection changes)
         return X_selected, y_selected

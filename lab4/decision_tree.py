@@ -13,6 +13,7 @@ class DecisionTree:
 
     def evaluate(self, X, y):
 <<<<<<< HEAD
+<<<<<<< HEAD
         predicted = self.predict(X) #
         predicted = [round(p) for p in predicted] # zaokrąglanie wyników do 0 lub 1
         print(f"Accuracy: {round(np.mean(predicted==y),2)}") # wyświetlanie dokładności modelu 
@@ -22,6 +23,11 @@ class DecisionTree:
         predicted = [round(p) for p in predicted]
         print(f"Accuracy: {round(np.mean(predicted==y),2)}")
 >>>>>>> 6c2a2b0 (Dodanie kolejnej części)
+=======
+        predicted = self.predict(X) #
+        predicted = [round(p) for p in predicted] # zaokrąglanie wyników do 0 lub 1
+        print(f"Accuracy: {round(np.mean(predicted==y),2)}") # wyświetlanie dokładności modelu 
+>>>>>>> efadf93 (bagging and feature selection changes)
 
     def predict(self, X):
         prediction = []
