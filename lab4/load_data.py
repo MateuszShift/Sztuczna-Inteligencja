@@ -15,11 +15,8 @@ def generate_data():
 
 
 def load_titanic():
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> efadf93 (bagging and feature selection changes)
-    data = pd.read_csv("/Users/macmat/Desktop/Sztuczna/lab4/titanic.csv")
+
+    data = pd.read_csv("titanic.csv")
     data = data[["Pclass", "Fare", "Parch", "SibSp", "Age", "Sex", "Survived"]] # wybieranie kolumn z danych 
     data = data.dropna().reset_index(drop=True) # usuwanie wierszy z brakującymi danymi
     data["Sex"] = [1 if sex == "female" else 0 for sex in data["Sex"]] # zamiana wartosci w kolumnach na 1 i 0
@@ -31,25 +28,5 @@ def load_titanic():
     X_test = data_test.drop("Survived", axis=1).to_numpy() # wybieranie danych testowych bez kolumny Survived i zamiana na numpy array
     y_test = data_test["Survived"].to_numpy() # wybieranie kolumny Survived i zamiana na numpy array
     return (X_train, y_train), (X_test, y_test) # zwracanie danych treningowych i testowych
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    data = pd.read_csv("titanic.csv")
-    data = data[["Pclass", "Fare", "Parch", "SibSp", "Age", "Sex", "Survived"]]
-    data = data.dropna().reset_index(drop=True)
-    data["Sex"] = [1 if sex == "female" else 0 for sex in data["Sex"]]
-    test_idx = np.random.choice(range(data.shape[0]), round(0.2*data.shape[0]), replace=False)
-    data_test = data.iloc[test_idx, :]
-    data_train = data.drop(test_idx, axis=0)
-    X_train = data_train.drop("Survived", axis=1).to_numpy()
-    y_train = data_train["Survived"].to_numpy()
-    X_test = data_test.drop("Survived", axis=1).to_numpy()
-    y_test = data_test["Survived"].to_numpy()
-    return (X_train, y_train), (X_test, y_test)
->>>>>>> 6c2a2b0 (Dodanie kolejnej części)
-=======
->>>>>>> efadf93 (bagging and feature selection changes)
-=======
 
->>>>>>> 58f5208 (changes)

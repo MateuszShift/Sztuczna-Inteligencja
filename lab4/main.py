@@ -4,16 +4,8 @@ from random_forest import RandomForest
 from load_data import generate_data, load_titanic
 
 def main():
-<<<<<<< HEAD
-<<<<<<< HEAD
-    np.random.seed(123) 
-=======
-    np.random.seed(123)
->>>>>>> 6c2a2b0 (Dodanie kolejnej części)
-=======
-    np.random.seed(123) 
->>>>>>> efadf93 (bagging and feature selection changes)
 
+    np.random.seed(123)
     train_data, test_data = load_titanic()
 
     dt = DecisionTree({"depth": 14})
@@ -21,22 +13,17 @@ def main():
     dt.evaluate(*train_data)
     dt.evaluate(*test_data)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     rf = RandomForest({"ntrees": 100, "feature_subset": 2, "depth": 14})
     rf.train(*train_data) 
     
-<<<<<<< HEAD
-=======
+
     rf = RandomForest({"ntrees": 10, "feature_subset": 2, "depth": 14})
     rf.train(*train_data)
->>>>>>> 6c2a2b0 (Dodanie kolejnej części)
-=======
+
     rf = RandomForest({"ntrees": 100, "feature_subset": 2, "depth": 14})
     rf.train(*train_data) 
->>>>>>> efadf93 (bagging and feature selection changes)
-=======
->>>>>>> 58f5208 (changes)
+
     rf.evaluate(*train_data)
     rf.evaluate(*test_data)
 
