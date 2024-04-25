@@ -18,6 +18,7 @@ class DecisionTree:
         predicted = [round(p) for p in predicted] # zaokrąglanie wyników do 0 lub 1
         print(f"Accuracy: {round(np.mean(predicted==y),2)}") # wyświetlanie dokładności modelu 
         
+<<<<<<< HEAD
 =======
         predicted = self.predict(X)
         predicted = [round(p) for p in predicted]
@@ -28,6 +29,8 @@ class DecisionTree:
         predicted = [round(p) for p in predicted] # zaokrąglanie wyników do 0 lub 1
         print(f"Accuracy: {round(np.mean(predicted==y),2)}") # wyświetlanie dokładności modelu 
 >>>>>>> efadf93 (bagging and feature selection changes)
+=======
+>>>>>>> 58f5208 (changes)
 
     def predict(self, X):
         prediction = []

@@ -33,11 +33,14 @@ class RandomForest:
         X_selected, y_selected = [], []
         
         
+<<<<<<< HEAD
 =======
     def bagging(self, X, y): 
         X_selected, y_selected = [], []
         
 >>>>>>> efadf93 (bagging and feature selection changes)
+=======
+>>>>>>> 58f5208 (changes)
         for i in range(X.shape[1]):  
             idx = np.random.randint(0, len(X), len(X)) 
             X_selected  = np.append(X_selected, X[idx]) 

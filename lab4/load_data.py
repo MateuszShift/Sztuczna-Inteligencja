@@ -32,6 +32,7 @@ def load_titanic():
     y_test = data_test["Survived"].to_numpy() # wybieranie kolumny Survived i zamiana na numpy array
     return (X_train, y_train), (X_test, y_test) # zwracanie danych treningowych i testowych
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     data = pd.read_csv("titanic.csv")
@@ -49,3 +50,6 @@ def load_titanic():
 >>>>>>> 6c2a2b0 (Dodanie kolejnej części)
 =======
 >>>>>>> efadf93 (bagging and feature selection changes)
+=======
+
+>>>>>>> 58f5208 (changes)

@@ -19,6 +19,7 @@ class Node: # klasa reprezentująca węzeł drzewa decyzyjnego
         
         n_total = y.shape[0]  # liczba wszystkich danych w zbiorze
         
+<<<<<<< HEAD
 
         # TODO find position of best data split
         for idx in possible_splits: 
@@ -98,6 +99,8 @@ class Node: # klasa reprezentująca węzeł drzewa decyzyjnego
         best_idx = 0
         
         n_total = y.shape[0]  # liczba wszystkich danych w zbiorze
+=======
+>>>>>>> 58f5208 (changes)
 
         # TODO find position of best data split
         for idx in possible_splits: 

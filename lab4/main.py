@@ -26,6 +26,7 @@ def main():
     rf = RandomForest({"ntrees": 100, "feature_subset": 2, "depth": 14})
     rf.train(*train_data) 
     
+<<<<<<< HEAD
 =======
     rf = RandomForest({"ntrees": 10, "feature_subset": 2, "depth": 14})
     rf.train(*train_data)
@@ -34,6 +35,8 @@ def main():
     rf = RandomForest({"ntrees": 100, "feature_subset": 2, "depth": 14})
     rf.train(*train_data) 
 >>>>>>> efadf93 (bagging and feature selection changes)
+=======
+>>>>>>> 58f5208 (changes)
     rf.evaluate(*train_data)
     rf.evaluate(*test_data)
 
