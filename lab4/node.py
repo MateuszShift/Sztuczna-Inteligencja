@@ -5,7 +5,7 @@ import numpy as np
 
 class Node: # klasa reprezentująca węzeł drzewa decyzyjnego 
     def __init__(self):
-        self.left_child = None
+        self.left_child = None 
         self.right_child = None
         self.feature_idx = None # indeks cechy
         self.feature_value = None
