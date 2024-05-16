@@ -2,34 +2,37 @@ import numpy as np
 
 def initialize_centroids_forgy(data, k):
     # TODO implement random initialization
-    par = data.shape[0]
+    par = data.shape[0] 
     centroids = data[np.random.choice(par,k,replace=False)] 
     return centroids
 
 def initialize_centroids_kmeans_pp(data, k): 
     # TODO implement kmeans++ initizalization 
-    n_features = data.shape[1]
-    centroids = np.zeros((k, n_features)) # k x d
-    idx = np.random.choice(data.shape[0]) #wybor pierwszego
-    centroids[0] = data[idx]
+    n_samples, n_features = data.shape
+    centroids = np.zeros((k, n_features))
+
+    first_centroid_idx = np.random.choice(n_samples)
+    centroids[0] = data[first_centroid_idx]
+
     for i in range(1, k):
-        dist = np.zeros(data.shape[0]) # odleglosci od punktow
-        for j in range(data.shape[0]):
-            dist[j] = np.min(np.sum((data[j] - centroids[:i])**2, axis=1)) # odleglosc od najblizszego punktu
-        dist = dist/np.sum(dist) # normalizacja odleglosci 
-        centroids[i] = data[np.random.choice(data.shape[0], p=dist)] 
+        distances = np.zeros(n_samples)
+        for j in range(n_samples): 
+            distances[j] = np.sum((data[j] - centroids[:i]) ** 2, axis=1).min()
+        next_centroid_idx = np.argmax(distances)
+        centroids[i] = data[next_centroid_idx]
+
     return centroids
 
 def assign_to_cluster(data, centroid):
     # TODO find the closest cluster for each data point
     dist  = np.sum((data[:, np.newaxis] - centroid)**2, axis=2)
-    cluster = np.argmin(dist, axis=1) # indeksy najmniejszych odleglosci
+    cluster = np.argmin(dist, axis=1) 
     return cluster
 
 def update_centroids(data, assignments):
     # TODO find new centroids based on the assignments
-    cluster = np.unique(assignments) # unikalne indeksy
-    centroids = np.zeros((len(cluster), data.shape[1])) # nowe centroidy    
+    cluster = np.unique(assignments) 
+    centroids = np.zeros((len(cluster), data.shape[1]))  
     for i in cluster:
         centroids[i] = np.mean(data[assignments==i], axis=0)
     return centroids
